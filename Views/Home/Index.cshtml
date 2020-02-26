@@ -1,4 +1,4 @@
-﻿@{
+﻿@@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +6,21 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").load("https://waterservices.usgs.gov/nwis/site/?format=rdb,1.0&stateCd=wv");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+    <button>Get Stream Data!</button>
+
+</body>
