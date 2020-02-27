@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarthApp", "EarthApp.csproj", "{41F629F1-9AD7-489C-86FC-2271B8CADED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsApp", "MarsApp.csproj", "{41F629F1-9AD7-489C-86FC-2271B8CADED3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

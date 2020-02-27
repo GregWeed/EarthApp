@@ -1,6 +1,6 @@
 using System;
 
-namespace EarthApp.Models
+namespace MarsApp.Models
 {
     public class ErrorViewModel
     {

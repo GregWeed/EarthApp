@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using EarthApp.Models;
+using MarsApp.Models;
 
-namespace EarthApp.Controllers
+namespace MarsApp.Controllers
 {
     public class HomeController : Controller
     {
