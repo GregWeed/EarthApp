@@ -9,7 +9,7 @@ using MarsApp.Models;
 
 namespace MarsApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[TodoItems]")]
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
