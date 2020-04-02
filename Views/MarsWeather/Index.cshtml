@@ -1,178 +1,284 @@
-﻿
+﻿<!DOCTYPE html>
 @{
     ViewData["Title"] = "Mars (Post)Weekly Weather";
 }
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<h1>Weather On Mars over the Past Week:</h1>
-<hr />
+<head runat="server">
+    <style>
+        .LabelBrown {
+            font-weight: bold;
+            color: sandybrown;
+            background-color: white;
+        }
+
+        .LabelBlue {
+            font-weight: bold;
+            color: darkblue;
+            background-color: white;
+        }
+
+        .ClassJoined {
+            font-weight: normal;
+            font-size: 50px;
+            color: darkcyan;
+        }
+       
+    </style>
+</head>
+
+
+
+<body style="background-image: url(@ViewBag.apod);">
+</body>
+
+
+<div class=LabelBlue>
+
+    <h1>Weather On Mars over the Past Week:</h1>
+    <hr />
     <p>
         NASA’s InSight Mars lander continually takes instrument measurements at Elysium Planitia, a flat near Mars’ equator and transmits the data to Earth.
         Here is some of the weather from the past week!
     </p>
-<hr />
+    <hr />
     <!--Day One-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature
     <br />
-        <label>Low: </label>@ViewBag.Low
+    <label>Low: </label>
+    @ViewBag.Low
     <br />
-        <label>High: </label>@ViewBag.High
+    <label>High: </label>
+    @ViewBag.High
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure
     <br />
-        <label>Current Season: </label>@ViewBag.Season
+    <label>Current Season: </label>
+    @ViewBag.Season
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection
     <hr>
 
 
     <!--Day Two-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay1
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay1
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay1
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay1
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature1
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature1
     <br />
-        <label>Low: </label>@ViewBag.Low1
+    <label>Low: </label>
+    @ViewBag.Low1
     <br />
-        <label>High: </label>@ViewBag.High1
+    <label>High: </label>
+    @ViewBag.High1
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure1
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure1
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure1
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure1
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure1
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure1
     <br />
-        <label>Current Season: </label>@ViewBag.Season1
+    <label>Current Season: </label>
+    @ViewBag.Season1
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection1
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection1
     <hr>
 
 
     <!--Day Three-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay2
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay2
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay2
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay2
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature2
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature2
     <br />
-        <label>Low: </label>@ViewBag.Low2
+    <label>Low: </label>
+    @ViewBag.Low2
     <br />
-        <label>High: </label>@ViewBag.High2
+    <label>High: </label>
+    @ViewBag.High2
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure2
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure2
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure2
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure2
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure2
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure2
     <br />
-        <label>Current Season: </label>@ViewBag.Season2
+    <label>Current Season: </label>
+    @ViewBag.Season2
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection2
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection2
     <hr />
 
 
     <!--Day Four-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay3
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay3
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay3
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay3
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature3
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature3
     <br />
-        <label>Low: </label>@ViewBag.Low3
+    <label>Low: </label>
+    @ViewBag.Low3
     <br />
-        <label>High: </label>@ViewBag.High3
+    <label>High: </label>
+    @ViewBag.High3
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure3
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure3
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure3
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure3
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure3
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure3
     <br />
-        <label>Current Season: </label>@ViewBag.Season3
+    <label>Current Season: </label>
+    @ViewBag.Season3
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection3
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection3
     <hr />
 
 
     <!--Day Five-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay4
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay4
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay4
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay4
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature4
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature4
     <br />
-        <label>Low: </label>@ViewBag.Low4
+    <label>Low: </label>
+    @ViewBag.Low4
     <br />
-        <label>High: </label>@ViewBag.High4
+    <label>High: </label>
+    @ViewBag.High4
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure4
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure4
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure4
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure4
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure4
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure4
     <br />
-        <label>Current Season: </label>@ViewBag.Season4
+    <label>Current Season: </label>
+    @ViewBag.Season4
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection4
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection4
     <hr />
 
 
     <!--Day Six-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay5
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay5
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay5
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay5
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature5
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature5
     <br />
-        <label>Low: </label>@ViewBag.Low5
+    <label>Low: </label>
+    @ViewBag.Low5
     <br />
-        <label>High: </label>@ViewBag.High5
+    <label>High: </label>
+    @ViewBag.High5
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure5
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure5
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure5
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure5
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure5
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure5
     <br />
-        <label>Current Season: </label>@ViewBag.Season5
+    <label>Current Season: </label>
+    @ViewBag.Season5
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection5
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection5
     <hr />
 
 
     <!--Day Seven-->
     <br />
-        <label>Martian Day(Sol) :</label>@ViewBag.MartianDay6
+    <label>Martian Day(Sol) :</label>
+    @ViewBag.MartianDay6
     <br />
-        <label>Earth Day(Time of First Data Transmission):</label>@ViewBag.EarthDay6
+    <label>Earth Day(Time of First Data Transmission):</label>
+    @ViewBag.EarthDay6
     <br />
-        <label>Average Temperature: </label>@ViewBag.AverageTemperature6
+    <label>Average Temperature: </label>
+    @ViewBag.AverageTemperature6
     <br />
-        <label>Low: </label>@ViewBag.Low6
+    <label>Low: </label>
+    @ViewBag.Low6
     <br />
-        <label>High: </label>@ViewBag.High6
+    <label>High: </label>
+    @ViewBag.High6
     <br />
-        <label>Average Atmospheric Pressure: </label>@ViewBag.Pressure6
+    <label>Average Atmospheric Pressure: </label>
+    @ViewBag.Pressure6
     <br />
-        <label>Lowest Atmospheric Pressure Reading: </label>@ViewBag.LowPressure6
+    <label>Lowest Atmospheric Pressure Reading: </label>
+    @ViewBag.LowPressure6
     <br />
-        <label>Highest Atmospheric Pressure Reading: </label>@ViewBag.HighPressure6
+    <label>Highest Atmospheric Pressure Reading: </label>
+    @ViewBag.HighPressure6
     <br />
-        <label>Current Season: </label>@ViewBag.Season6
+    <label>Current Season: </label>
+    @ViewBag.Season6
     <br />
-        <label>Common Wind Direction: </label>@ViewBag.WindDirection6
+    <label>Common Wind Direction: </label>
+    @ViewBag.WindDirection6
     <hr>
+
+    </p>
+
+</html>
