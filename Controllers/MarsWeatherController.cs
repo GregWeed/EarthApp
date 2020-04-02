@@ -12,12 +12,17 @@ namespace MarsApp.Controllers
         // GET: MarsWeather
         public ActionResult Index()
         {
+            Apod apod = new Apod("https://api.nasa.gov/planetary/apod?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4");
+
+
+
+
+
             MarsWeather weather = new MarsWeather("https://api.nasa.gov/insight_weather/?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4&feedtype=json&ver=1.0");
             Dictionary<string, dynamic> solDictionary = weather.solDictionary;
-
+            ViewBag.apod = apod.apodDictionary.Keys.ElementAt(0);
+           
             string solDay1 = 
-
-
             //Day 1
             ViewBag.MartianDay = " " + solDictionary.Keys.ElementAt(0);
             ViewBag.EarthDay = " " + solDictionary.ElementAt(0).Value.First_UTC;//Time of first datum, of any sensor, for the Sol 
