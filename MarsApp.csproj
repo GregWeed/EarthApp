@@ -24,4 +24,7 @@
 
 
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\" />
+  </ItemGroup>
 </Project>

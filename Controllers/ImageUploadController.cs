@@ -13,6 +13,7 @@ namespace MarsApp.Controllers
 { 
     public class ImageUploadController : Controller
     {
+        //Provides information about the web hosting environment
         public static IWebHostEnvironment _environment;
 
         public ImageUploadController(IWebHostEnvironment environment)
@@ -22,9 +23,11 @@ namespace MarsApp.Controllers
 
         public class FileUploadAPI
         {
+            //Represents a file sent with the HttpRequest.
             public IFormFile files { get; set; }
         }
 
+        //Post Request
         [HttpPost]
         public async Task<string> Post(FileUploadAPI objFile)
         {
