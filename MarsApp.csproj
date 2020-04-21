@@ -30,5 +30,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\API\APIPictures.cshtml" />
+    <Content Remove="Views\API\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\API\Index.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>Index.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\API\Index.cs">
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

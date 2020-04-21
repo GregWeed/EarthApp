@@ -10,9 +10,23 @@ using Microsoft.AspNetCore.Mvc;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MarsApp.Controllers
-{ 
+{
+    
     public class ImageUploadController : Controller
     {
+
+        public ActionResult Index()
+        {
+            MarsWeather weather = new MarsWeather("https://api.nasa.gov/insight_weather/?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4&feedtype=json&ver=1.0");
+            Dictionary<string, dynamic> solDictionary = weather.solDictionary;
+         
+           
+                ViewBag.image = "Sun.png";
+
+            return View();
+
+
+        }
         //Provides information about the web hosting environment
         public static IWebHostEnvironment _environment;
 
@@ -38,6 +52,7 @@ namespace MarsApp.Controllers
                     if(!Directory.Exists(_environment.WebRootPath + "\\Upload\\"))
                     {
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Upload\\");
+                        RedirectToAction(nameof(Index));
                     }
                     using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Upload\\" + objFile.files.FileName))
                     {
@@ -58,4 +73,6 @@ namespace MarsApp.Controllers
 
         }
     }
+
+
 }

@@ -1,6 +1,13 @@
-﻿<h1>Current Weather on Mars (Picture)</h1>
+﻿@{
+    ViewData["Title"] = "Mars WeatherImageUploadAPI";
+}
+    <h1>@ViewData["Title"]</h1>
 <hr />
 <p>
     This uses API created by David Wills. Posts a picture (Storm cloud, snow, rain, sunshine, etc) based upon the weather
     conditions retrieved from the Mars weather API by NASA.
-</p>
+    </p>
+<hr />
+    
+    <br />
+    <img src="@ViewBag.image">
