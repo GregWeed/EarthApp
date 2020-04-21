@@ -26,5 +26,9 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Upload\" />
+    <Folder Include="Views\API\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\API\APIPictures.cshtml" />
   </ItemGroup>
 </Project>
