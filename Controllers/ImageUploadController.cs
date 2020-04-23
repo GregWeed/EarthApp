@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MarsApp.Controllers
 {
-    
+    [Route("api/[controller]")]
     public class ImageUploadController : Controller
     {
 

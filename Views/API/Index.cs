@@ -25,39 +25,42 @@ public partial class Index : IndexBase
 
 public override void Execute()
 {
+WriteLiteral("// ");
+
 
 #line 1 "Index.cshtml"
-  
-    ViewData["Title"] = "Mars WeatherImageUploadAPI";
+     
+    //ViewData["Title"] = "Mars WeatherImageUploadAPI";
+//}
+    //<h1>@ViewData["Title"]</h1>
 
 
 #line default
 #line hidden
-WriteLiteral("\r\n    <h1>");
+WriteLiteral("<hr />\r\n");
+
+WriteLiteral("<p>\r\n    This uses API created by David Wills. Posts a picture (Storm cloud, snow" +
+", rain, sunshine, etc) based upon the weather\r\n    conditions retrieved from the" +
+" Mars weather API by NASA.\r\n    </p>\r\n");
+
+WriteLiteral("<hr />\r\n");
 
 
-#line 4 "Index.cshtml"
-   Write(ViewData["Title"]);
+#line 11 "Index.cshtml"
+    
 
 
 #line default
 #line hidden
-WriteLiteral("</h1>\r\n<hr />\r\n<p>\r\n    This uses API created by David Wills. Posts a picture (St" +
-"orm cloud, snow, rain, sunshine, etc) based upon the weather\r\n    conditions ret" +
-"rieved from the Mars weather API by NASA.\r\n    </p>\r\n<hr />\r\n    \r\n    <br />\r\n " +
-"   <img");
+WriteLiteral("    <br />\r\n");
 
-WriteAttribute ("src", " src=\"", "\""
 
 #line 13 "Index.cshtml"
-, Tuple.Create<string,object,bool> ("", ViewBag.image
+   // <p>@ViewBag.image></p>
+
 
 #line default
 #line hidden
-, false)
-);
-WriteLiteral(">\r\n");
-
 }
 }
 
