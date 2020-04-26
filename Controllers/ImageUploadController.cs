@@ -11,14 +11,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MarsApp.Controllers
 {
-    [Route("api/[controller]")]
+    
     public class ImageUploadController : Controller
     {
 
         public ActionResult Index()
         {
-            MarsWeather weather = new MarsWeather("https://api.nasa.gov/insight_weather/?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4&feedtype=json&ver=1.0");
-            Dictionary<string, dynamic> solDictionary = weather.solDictionary;
+           
          
            
                 ViewBag.image = "Sun.png";

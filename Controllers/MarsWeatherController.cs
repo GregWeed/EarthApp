@@ -17,11 +17,16 @@ namespace MarsApp.Controllers
 
 
 
-
+            // API call through the Mars weather class.  
             MarsWeather weather = new MarsWeather("https://api.nasa.gov/insight_weather/?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4&feedtype=json&ver=1.0");
+            // 
             Dictionary<string, dynamic> solDictionary = weather.solDictionary;
             ViewBag.apod = apod.apodDictionary.Keys.ElementAt(0);
-           
+
+
+            // Each ViewBag below has contains the specified attrubte pulled from the json  in solDictionary.  Ex: ViewBag.MartianDay contains the sol that the weather was recorded.
+            // All of these variables are displayed under the Mars weather view, inside of the index file.  This information will eventually be stored as objects in the database upon 
+            // completion.
             string solDay1 = 
             //Day 1
             ViewBag.MartianDay = " " + solDictionary.Keys.ElementAt(0);
