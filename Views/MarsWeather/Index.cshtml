@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<!--This document is to help provide the UI designer with an idea as to how the current information that obtained from nasa is formatted.
+    Once the database is completed, the information contained in the DB should have the same formatting so UI design can still be continued.-->
+
+<!DOCTYPE html>
 @{
+    //Title assignment for the tab in the browser
     ViewData["Title"] = "Mars (Post)Weekly Weather";
 }
+<!--CSS, feel free to change this-->
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head runat="server">
     <style>
         .LabelBrown {
@@ -23,18 +27,16 @@
             font-size: 50px;
             color: darkcyan;
         }
-       
     </style>
 </head>
 
 
-
+<!--The background image for this page is from the apod api call. Feel free to integrate this into the project however you like in terms of the UI-->
 <body style="background-image: url(@ViewBag.apod);">
 </body>
 
-
+<!-- Each Viewbag from MarsWeatherController.cs is displayed as a label. The UI guy can handle this information however the team see's fit in terms of how the web app functions.-->
 <div class=LabelBlue>
-
     <h1>Weather On Mars over the Past Week:</h1>
     <hr />
     <p>
@@ -42,8 +44,7 @@
         Here is some of the weather from the past week!
     </p>
     <hr />
-    <!-- Each Viewbag from MarsWeatherController.cs is displayed as a label.  Front end development of this information is assigned to another teammember.-->
-    <!--Day One-->
+    <!--Day One, each viewbag is called from the mars weather controller.-->
     <br />
     <label>Martian Day(Sol) :</label>
     @ViewBag.MartianDay
@@ -246,7 +247,6 @@
     @ViewBag.WindDirection5
     <hr />
 
-
     <!--Day Seven-->
     <br />
     <label>Martian Day(Sol) :</label>
@@ -279,7 +279,5 @@
     <label>Common Wind Direction: </label>
     @ViewBag.WindDirection6
     <hr>
-
     </p>
-
 </html>

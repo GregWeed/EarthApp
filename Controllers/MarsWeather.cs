@@ -6,7 +6,7 @@ using System.Net;
 
 namespace MarsApp.Controllers
 {
-
+   //This class makes a call to nasa's Mars weather API.  
     public class MarsWeather
     {
         string apiURL;
@@ -17,8 +17,6 @@ namespace MarsApp.Controllers
         //Key = Sol Key, Value = dynamic Sol Object based on the corresponding key
         public Dictionary<string, dynamic> solDictionary = new Dictionary<string, dynamic>();
 
-
-
         public MarsWeather(string apiURL){
             this.apiURL = apiURL;
             //Generates the json string and stores it in the json class variable
@@ -28,9 +26,7 @@ namespace MarsApp.Controllers
             }
             generateSolObjects();
         }
-
-
-        
+        //This function generates the SOL objects for each SOL on Mars.  Thes will need to be stored in the database upon completion, as there are only seven sols that are returned from the api call at aby given time.
         private void generateSolObjects()
         {
             var jsonString = new JavaScriptSerializer().Deserialize<dynamic>(json);
@@ -44,12 +40,11 @@ namespace MarsApp.Controllers
             //sol object from the jsonString
             this.solNumberArray = solString.Split(',');
 
-
             for (int i = 0; i < 7; i++)
             {
                 string jsonSolObj = jsonString[solNumberArray[i]] + "";
                 dynamic solWeatherObject = JsonConvert.DeserializeObject<dynamic>(jsonSolObj);
-                
+                //Dictionary holds each sol object
                 solDictionary.Add(solNumberArray[i], solWeatherObject);
             }
         }
