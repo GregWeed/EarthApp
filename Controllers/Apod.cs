@@ -16,14 +16,12 @@ namespace MarsApp.Controllers
        
         string[] apodArray;
         public Dictionary<string, dynamic> apodDictionary = new Dictionary<string, dynamic>();
-        //Key = Sol Key, Value = dynamic Sol Object based on the corresponding key
-     
-
-
+      
+        //Makes an api call to nasas astronomy pickture of the day.     
         public Apod(string apiURL)
         {
             this.apiURL = apiURL;
-            //Generates the json string and stores it in the json class variable
+            //Generates the json string
             using (WebClient wc = new WebClient())
             {
                 json = wc.DownloadString(apiURL);
@@ -31,21 +29,22 @@ namespace MarsApp.Controllers
             generateApodObjects();
         }
 
-
+        //Creates an apod object, which all we are currently concerned with is the URL so that we can get the image.  When the project has progressed further, we can consider integrating image information
+        //into the user interface.  
         private void generateApodObjects()
         {
             var jsonString = new JavaScriptSerializer().Deserialize<dynamic>(json);
             Console.WriteLine(jsonString);
-            // Gets sol keys segment of the json data
+            // Gets url from the called json
             string apodString = jsonString["hdurl"] + "";
-            //Removes unnecessary information from the solstring(commas and brackets)
+            //Removes unnecessary information from the jsonString(commas and brackets)
             apodString = apodString.Replace("[", "");
             apodString = apodString.Replace("]", "");
             apodString = apodString.Replace("\"", "");
-            //Splits the solString into an array of solDates.  These are used to access individual sol objects from jsonString. ex: jsonString[solArray[0]] returns a 
+            //Splits the APOD json
             //sol object from the jsonString
             this.apodArray = apodString.Split(',');
-
+            //Adds the object to the dictionary.
             apodDictionary.Add(apodArray[0], 0);
         }
     }
