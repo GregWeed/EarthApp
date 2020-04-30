@@ -20,13 +20,11 @@ namespace MarsApp.Controllers
 
         public IActionResult Index()
         {
+            Apod apod = new Apod("https://api.nasa.gov/planetary/apod?api_key=NcKMjeHHC1KUE9P03JuNaJA5vphTjexO9KzCcPh4");
+            ViewBag.apod = apod.apodDictionary.Keys.ElementAt(0);
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
